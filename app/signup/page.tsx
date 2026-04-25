@@ -1,4 +1,3 @@
-import { SignUp } from '@clerk/nextjs'
 import Link from 'next/link'
 
 export default function SignupPage() {
@@ -20,14 +19,30 @@ export default function SignupPage() {
         </div>
 
         <div className="p-6 rounded-xl border border-border bg-surface">
-          <SignUp 
-            appearance={{
-              elements: {
-                formButtonPrimary: 'bg-primary hover:bg-secondary',
-                footerActionLink: 'text-secondary hover:text-white'
-              }
-            }}
-          />
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm text-text-secondary mb-2">Email</label>
+              <input 
+                type="email" 
+                placeholder="you@example.com"
+                className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-secondary outline-none transition-colors"
+              />
+            </div>
+            <div>
+              <label className="block text-sm text-text-secondary mb-2">Password</label>
+              <input 
+                type="password" 
+                placeholder="••••••••"
+                className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-secondary outline-none transition-colors"
+              />
+            </div>
+            <button className="w-full py-3 bg-primary hover:bg-secondary rounded-lg transition-colors font-semibold">
+              Create Account
+            </button>
+          </div>
+          <p className="text-center text-text-secondary text-sm mt-6">
+            Coming soon! Join the waitlist.
+          </p>
         </div>
 
         <p className="text-center text-text-secondary text-sm mt-6">

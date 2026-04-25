@@ -1,4 +1,3 @@
-import { SignIn } from '@clerk/nextjs'
 import Link from 'next/link'
 
 export default function LoginPage() {
@@ -20,14 +19,30 @@ export default function LoginPage() {
         </div>
 
         <div className="p-6 rounded-xl border border-border bg-surface">
-          <SignIn 
-            appearance={{
-              elements: {
-                formButtonPrimary: 'bg-primary hover:bg-secondary',
-                footerActionLink: 'text-secondary hover:text-white'
-              }
-            }}
-          />
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm text-text-secondary mb-2">Email</label>
+              <input 
+                type="email" 
+                placeholder="you@example.com"
+                className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-secondary outline-none transition-colors"
+              />
+            </div>
+            <div>
+              <label className="block text-sm text-text-secondary mb-2">Password</label>
+              <input 
+                type="password" 
+                placeholder="••••••••"
+                className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-secondary outline-none transition-colors"
+              />
+            </div>
+            <button className="w-full py-3 bg-primary hover:bg-secondary rounded-lg transition-colors font-semibold">
+              Sign In
+            </button>
+          </div>
+          <p className="text-center text-text-secondary text-sm mt-6">
+            Coming soon! Sign up to get early access.
+          </p>
         </div>
 
         <p className="text-center text-text-secondary text-sm mt-6">

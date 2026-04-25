@@ -2,8 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Menu, X, ChevronDown } from 'lucide-react'
-import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -39,22 +38,14 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Auth Buttons */}
+        {/* Auth Buttons - Simple Links for Now */}
         <div className="hidden md:flex items-center gap-4">
-          <SignedOut>
-            <Link href="/login" className="text-text-secondary hover:text-white transition-colors">
-              Log in
-            </Link>
-            <Link href="/signup" className="px-4 py-2 bg-primary hover:bg-secondary rounded-lg transition-colors font-medium">
-              Get Started
-            </Link>
-          </SignedOut>
-          <SignedIn>
-            <Link href="/dashboard" className="text-text-secondary hover:text-white transition-colors">
-              Dashboard
-            </Link>
-            <UserButton afterSignOutUrl="/" />
-          </SignedIn>
+          <Link href="/login" className="text-text-secondary hover:text-white transition-colors">
+            Log in
+          </Link>
+          <Link href="/signup" className="px-4 py-2 bg-primary hover:bg-secondary rounded-lg transition-colors font-medium">
+            Get Started
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -83,19 +74,12 @@ export default function Navbar() {
               Pricing
             </Link>
             <hr className="border-border" />
-            <SignedOut>
-              <Link href="/login" className="text-text-secondary hover:text-white" onClick={() => setIsOpen(false)}>
-                Log in
-              </Link>
-              <Link href="/signup" className="px-4 py-2 bg-primary hover:bg-secondary rounded-lg transition-colors text-center font-medium" onClick={() => setIsOpen(false)}>
-                Get Started
-              </Link>
-            </SignedOut>
-            <SignedIn>
-              <Link href="/dashboard" className="text-text-secondary hover:text-white" onClick={() => setIsOpen(false)}>
-                Dashboard
-              </Link>
-            </SignedIn>
+            <Link href="/login" className="text-text-secondary hover:text-white" onClick={() => setIsOpen(false)}>
+              Log in
+            </Link>
+            <Link href="/signup" className="px-4 py-2 bg-primary hover:bg-secondary rounded-lg transition-colors text-center font-medium" onClick={() => setIsOpen(false)}>
+              Get Started
+            </Link>
           </div>
         </div>
       )}
