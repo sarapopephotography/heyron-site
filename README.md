@@ -108,3 +108,4 @@ Edit landing page in `app/page.tsx`.
 ## 📄 License
 
 MIT License — see LICENSE for details.
+
