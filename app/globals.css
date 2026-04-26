@@ -72,9 +72,9 @@ a {
 
 /* Animated gradient background */
 .animated-gradient {
-  background: linear-gradient(-45deg, #0A0A0A, #0D0D0D, #1a1a2e, #0A0A0A);
+  background: linear-gradient(-45deg, var(--primary), var(--secondary), var(--accent), var(--background));
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 20s ease infinite;
 }
 
 @keyframes gradient {
