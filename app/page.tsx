@@ -1,232 +1,188 @@
 import Link from 'next/link'
-import { ArrowRight, Zap, Shield, Users, MessageSquare, Brain, Code } from 'lucide-react'
+import { ArrowRight, MessageSquare, Zap, Shield, Code } from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className="animated-gradient">
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center pt-16">
-        <div className="max-w-content mx-auto px-6 text-center">
-          <div className="fade-in">
-            <span className="inline-block px-4 py-1 rounded-full bg-primary/30 text-text-secondary text-sm font-mono mb-6">
-              🚀 Now with GPT-4o & Claude integration
-            </span>
+    <div className="min-h-screen bg-background">
+      {/* Minimal Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-sm">
+        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 font-semibold">
+            <span className="text-xl">🦝</span>
+            <span>HeyRon</span>
+          </Link>
+          <nav className="hidden md:flex items-center gap-6 text-sm text-text-secondary">
+            <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
+            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
+          </nav>
+          <div className="flex items-center gap-3">
+            <Link href="/login" className="text-sm text-text-secondary hover:text-white transition-colors">
+              Log in
+            </Link>
+            <Link href="/signup" className="px-4 py-2 bg-white text-black text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors">
+              Sign up
+            </Link>
           </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 fade-in" style={{ animationDelay: '0.1s' }}>
-            Your AI Agent.
+        </div>
+      </header>
+
+      {/* Hero - Short, Sharp, Clear */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Your AI teammate.
             <br />
-            <span className="gradient-text">Works while you sleep.</span>
+            <span className="text-text-secondary">Works when you can't.</span>
           </h1>
           
-          <p className="text-xl text-text-secondary max-w-2xl mx-auto mb-8 fade-in" style={{ animationDelay: '0.2s' }}>
-            Connect HeyRon to Discord, Telegram, Slack, and more. 
-            It handles messages, manages tasks, and grows your business — 24/7.
+          <p className="text-lg text-text-secondary max-w-xl mx-auto mb-8">
+            Connect your agent to Discord, Telegram, Email, and more. 
+            It handles messages, manages tasks, and keeps your business running — 24/7.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in" style={{ animationDelay: '0.3s' }}>
-            <Link href="/signup" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-secondary rounded-lg transition-colors font-semibold text-lg group">
-              Get Your Agent
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/signup" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-colors">
+              Get Started Free
+              <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/docs" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border hover:border-secondary rounded-lg transition-colors font-semibold text-lg">
-              Read the Docs
+            <Link href="/docs" className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-border hover:border-text-secondary rounded-lg transition-colors text-text-secondary hover:text-white">
+              Read the docs
             </Link>
           </div>
+        </div>
 
-          {/* Hero Visual */}
-          <div className="mt-16 relative fade-in" style={{ animationDelay: '0.4s' }}>
-            <div className="max-w-4xl mx-auto rounded-xl border border-border bg-surface/50 backdrop-blur p-4 glow">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <span className="ml-4 text-text-secondary text-sm font-mono">HeyRon Terminal</span>
-              </div>
-              <div className="font-mono text-sm text-left space-y-2">
-                <div className="text-text-secondary">// Your agent handling your business</div>
-                <div><span className="text-secondary">user@heyron</span>:<span className="text-text-secondary">~</span>$ <span className="text-green-400">HeyRon, any new leads today?</span></div>
-                <div className="text-text-secondary ml-4">📬 3 new inquiries from your website!</div>
-                <div className="text-text-secondary ml-4">• Sarah — interested in newborn photography session</div>
-                <div className="text-text-secondary ml-4">• Mike — asking about family portraits</div>
-                <div className="text-text-secondary ml-4">• Lisa — wants cake smash package info</div>
-                <div className="text-text-secondary ml-4">→ I've added them to your 17Hats CRM and sent follow-up emails.</div>
-                <div><span className="text-secondary">user@heyron</span>:<span className="text-text-secondary">~</span>$ <span className="text-green-400">Thanks! 🎉</span></div>
-              </div>
+        {/* Terminal Visual - Simple, Real */}
+        <div className="mt-16 max-w-3xl mx-auto">
+          <div className="rounded-lg border border-border bg-black/50 overflow-hidden">
+            <div className="flex items-center gap-2 px-4 py-2 border-b border-border bg-surface/50">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <div className="p-4 font-mono text-sm text-left">
+              <div className="text-text-secondary">$ heyron, any new leads?</div>
+              <div className="text-green-400 mt-1">→ 2 new leads from your website</div>
+              <div className="text-text-secondary mt-2">$ nice, add them to crm</div>
+              <div className="text-green-400">→ Done. Added to 17Hats. Follow-up emails sent.</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-24">
-        <div className="max-w-content mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              More Than Just a Chatbot
-            </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              HeyRon is a full-featured AI agent that integrates with your existing tools and workflows.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
-            {[
-              {
-                icon: MessageSquare,
-                title: 'Multi-Channel',
-                description: 'Connect to Discord, Telegram, WhatsApp, Signal, and more. One agent, everywhere.'
-              },
-              {
-                icon: Brain,
-                title: 'Memory That Sticks',
-                description: 'Your agent remembers important details, preferences, and context across conversations.'
-              },
-              {
-                icon: Zap,
-                title: 'Proactive Automation',
-                description: 'Set up heartbeats and cron jobs. Your agent checks in, sends reminders, and acts on schedule.'
-              },
-              {
-                icon: Shield,
-                title: 'Privacy First',
-                description: 'Your data stays yours. Configurable security settings and clear data boundaries.'
-              },
-              {
-                icon: Code,
-                title: 'Tool Integration',
-                description: 'Connect to 60+ skills including Gmail, Calendar, Stripe, Airtable, and custom APIs.'
-              },
-              {
-                icon: Users,
-                title: 'Team Collaboration',
-                description: 'Deploy sub-agents for specific tasks. Manager-worker patterns for complex workflows.'
-              }
-            ].map((feature, index) => (
-              <div key={index} className="p-6 rounded-xl border border-border bg-surface hover:border-secondary transition-colors">
-                <feature.icon className="w-10 h-10 text-secondary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-text-secondary">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-24 bg-surface">
-        <div className="max-w-content mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Get Started in Minutes
-            </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              From sign-up to your first agent interaction — it's that fast.
-            </p>
-          </div>
-
+      {/* Features - Grid, No Fluff */}
+      <section className="py-20 border-t border-border">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { step: '01', title: 'Create Your Agent', description: 'Sign up and customize your agent\'s name, personality, and behavior.' },
-              { step: '02', title: 'Connect Channels', description: 'Link Discord, Telegram, or other platforms where you want to chat.' },
-              { step: '03', title: 'Watch It Work', description: 'Your agent is ready to help. Teach it your preferences and it learns.' }
-            ].map((item, index) => (
-              <div key={index} className="relative">
-                <div className="text-6xl font-bold text-primary/20 font-mono">{item.step}</div>
-                <div className="absolute top-0 left-0">
-                  <h3 className="text-xl font-semibold mt-2">{item.title}</h3>
-                  <p className="text-text-secondary mt-2">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-24">
-        <div className="max-w-content mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              Start free. Upgrade when you're ready.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {/* Free */}
-            <div className="p-6 rounded-xl border border-border bg-surface">
-              <h3 className="text-lg font-semibold text-text-secondary">Starter</h3>
-              <div className="text-4xl font-bold mt-4 mb-2">$0</div>
-              <p className="text-text-secondary text-sm mb-6">Forever free</p>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-center gap-2">✓ 1 AI Agent</li>
-                <li className="flex items-center gap-2">✓ 2 Channels</li>
-                <li className="flex items-center gap-2">✓ Basic memory</li>
-                <li className="flex items-center gap-2">✓ Community support</li>
-              </ul>
-              <Link href="/signup" className="mt-6 block w-full py-3 border border-border hover:border-secondary rounded-lg transition-colors text-center">
-                Get Started
-              </Link>
+            <div>
+              <MessageSquare className="w-6 h-6 text-text-secondary mb-3" />
+              <h3 className="font-semibold mb-2">Multi-Channel</h3>
+              <p className="text-sm text-text-secondary">
+                Discord, Telegram, WhatsApp, Signal — one agent, everywhere you are.
+              </p>
             </div>
-
-            {/* Pro */}
-            <div className="p-6 rounded-xl border-2 border-primary bg-surface relative glow-accent">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary rounded-full text-sm font-medium">
-                Most Popular
-              </div>
-              <h3 className="text-lg font-semibold text-white">Pro</h3>
-              <div className="text-4xl font-bold mt-4 mb-2">$29</div>
-              <p className="text-text-secondary text-sm mb-6">per month</p>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-center gap-2">✓ Unlimited agents</li>
-                <li className="flex items-center gap-2">✓ Unlimited channels</li>
-                <li className="flex items-center gap-2">✓ Advanced memory</li>
-                <li className="flex items-center gap-2">✓ Priority support</li>
-                <li className="flex items-center gap-2">✓ Custom skills</li>
-              </ul>
-              <Link href="/signup" className="mt-6 block w-full py-3 bg-primary hover:bg-secondary rounded-lg transition-colors text-center font-semibold">
-                Upgrade to Pro
-              </Link>
+            <div>
+              <Zap className="w-6 h-6 text-text-secondary mb-3" />
+              <h3 className="font-semibold mb-2">Memory</h3>
+              <p className="text-sm text-text-secondary">
+                Remembers context, preferences, and important details. No repeating yourself.
+              </p>
             </div>
-
-            {/* Team */}
-            <div className="p-6 rounded-xl border border-border bg-surface">
-              <h3 className="text-lg font-semibold text-text-secondary">Team</h3>
-              <div className="text-4xl font-bold mt-4 mb-2">$99</div>
-              <p className="text-text-secondary text-sm mb-6">per month</p>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-center gap-2">✓ Everything in Pro</li>
-                <li className="flex items-center gap-2">✓ 5 team members</li>
-                <li className="flex items-center gap-2">✓ Shared workspaces</li>
-                <li className="flex items-center gap-2">✓ Admin controls</li>
-                <li className="flex items-center gap-2">✓ Dedicated support</li>
-              </ul>
-              <Link href="/signup" className="mt-6 block w-full py-3 border border-border hover:border-secondary rounded-lg transition-colors text-center">
-                Contact Sales
-              </Link>
+            <div>
+              <Shield className="w-6 h-6 text-text-secondary mb-3" />
+              <h3 className="font-semibold mb-2">Private</h3>
+              <p className="text-sm text-text-secondary">
+                Your data stays yours. Clear boundaries, configurable security.
+              </p>
+            </div>
+            <div>
+              <Code className="w-6 h-6 text-text-secondary mb-3" />
+              <h3 className="font-semibold mb-2">60+ Skills</h3>
+              <p className="text-sm text-text-secondary">
+                Gmail, Calendar, Stripe, Airtable, and more. Connect your tools.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-surface">
-        <div className="max-w-content mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to meet your AI agent?
-          </h2>
-          <p className="text-text-secondary text-lg mb-8 max-w-xl mx-auto">
-            Join thousands of users who've already transformed their workflow with HeyRon.
-          </p>
-          <Link href="/signup" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-secondary rounded-lg transition-colors font-semibold text-lg group">
-            Get Started Free
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+      {/* How It Works - 3 Steps Max */}
+      <section className="py-20 bg-surface/30 border-y border-border">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl font-semibold mb-8">How it works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="border-l border-border pl-4">
+              <div className="text-sm text-text-secondary mb-1">01</div>
+              <h3 className="font-medium mb-2">Create agent</h3>
+              <p className="text-sm text-text-secondary">Pick a name, set its personality. Done.</p>
+            </div>
+            <div className="border-l border-border pl-4">
+              <div className="text-sm text-text-secondary mb-1">02</div>
+              <h3 className="font-medium mb-2">Connect channels</h3>
+              <p className="text-sm text-text-secondary">Link Discord, Telegram, email. Wherever you chat.</p>
+            </div>
+            <div className="border-l border-border pl-4">
+              <div className="text-sm text-text-secondary mb-1">03</div>
+              <h3 className="font-medium mb-2">It works</h3>
+              <p className="text-sm text-text-secondary">Teach it your preferences. It learns as you go.</p>
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* Pricing - Simple */}
+      <section className="py-20" id="pricing">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl font-semibold mb-8 text-center">Pricing</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
+            <div className="p-6 rounded-lg border border-border">
+              <h3 className="font-medium text-text-secondary">Starter</h3>
+              <div className="text-3xl font-bold mt-2 mb-4">$0</div>
+              <ul className="text-sm text-text-secondary space-y-2">
+                <li>1 agent</li>
+                <li>2 channels</li>
+                <li>Basic memory</li>
+              </ul>
+            </div>
+            <div className="p-6 rounded-lg border-2 border-white bg-surface">
+              <h3 className="font-medium">Pro</h3>
+              <div className="text-3xl font-bold mt-2 mb-4">$29<span className="text-sm font-normal text-text-secondary">/mo</span></div>
+              <ul className="text-sm text-text-secondary space-y-2">
+                <li>Unlimited agents</li>
+                <li>Unlimited channels</li>
+                <li>Advanced memory</li>
+                <li>Priority support</li>
+              </ul>
+            </div>
+            <div className="p-6 rounded-lg border border-border">
+              <h3 className="font-medium text-text-secondary">Team</h3>
+              <div className="text-3xl font-bold mt-2 mb-4">$99<span className="text-sm font-normal text-text-secondary">/mo</span></div>
+              <ul className="text-sm text-text-secondary space-y-2">
+                <li>Everything in Pro</li>
+                <li>5 team members</li>
+                <li>Shared workspaces</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Simple Footer */}
+      <footer className="py-12 border-t border-border">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex items-center gap-2 text-sm text-text-secondary">
+              <span className="text-lg">🦝</span>
+              <span>HeyRon</span>
+            </div>
+            <div className="flex items-center gap-6 text-sm text-text-secondary">
+              <a href="/docs" className="hover:text-white transition-colors">Docs</a>
+              <a href="/blog" className="hover:text-white transition-colors">Blog</a>
+              <a href="https://github.com/heyron-ai" className="hover:text-white transition-colors">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
