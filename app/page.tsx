@@ -7,9 +7,10 @@ export default function Home() {
       {/* Minimal Header */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 font-semibold">
+          <Link href="/" className="flex items-center gap-3 font-semibold">
             <span className="text-xl">🦝</span>
             <span>HeyRon</span>
+            <span className="px-2 py-0.5 text-xs bg-primary/30 text-text-secondary rounded">Beta</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-sm text-text-secondary">
             <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
