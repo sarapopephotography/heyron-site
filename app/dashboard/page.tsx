@@ -1,99 +1,93 @@
 import Link from 'next/link'
-import { User, Settings, CreditCard, MessageSquare, Bot, Plus, ExternalLink } from 'lucide-react'
+import { Bot, CreditCard, MessageSquare, User, Settings } from 'lucide-react'
 
 export default function DashboardPage() {
   return (
-    <div className="min-h-screen pt-24 pb-16">
-      <div className="max-w-content mx-auto px-6">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Dashboard</h1>
-          <p className="text-text-secondary">Manage your HeyRon agents and subscription</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Main Agent Card */}
-          <div className="md:col-span-2 p-6 rounded-xl border border-border bg-surface">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-semibold flex items-center gap-2">
-                <Bot className="w-5 h-5 text-secondary" />
-                Your Agents
-              </h2>
-              <button className="px-4 py-2 bg-primary hover:bg-secondary rounded-lg transition-colors flex items-center gap-2 text-sm">
-                <Plus className="w-4 h-4" />
-                New Agent
-              </button>
-            </div>
-
-            <div className="p-4 rounded-lg border border-border bg-background/50">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                  <Bot className="w-6 h-6" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-semibold">My HeyRon</h3>
-                  <p className="text-text-secondary text-sm">Coming Soon</p>
-                </div>
-                <span className="px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm">
-                  Coming
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Subscription Card */}
-          <div className="p-6 rounded-xl border border-border bg-surface">
-            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-              <CreditCard className="w-5 h-5 text-secondary" />
-              Subscription
-            </h2>
-            <div className="p-4 rounded-lg border border-border bg-background/50 mb-4">
-              <div className="flex items-center justify-between mb-2">
-                <span className="font-semibold">Free Plan</span>
-                <span className="text-text-secondary text-sm">Current</span>
-              </div>
-              <p className="text-text-secondary text-sm">Sign up for Pro to unlock more features</p>
-            </div>
-            <Link href="/#pricing" className="w-full py-2 border border-border hover:border-secondary rounded-lg transition-colors text-sm text-center block">
-              View Plans
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-sm">
+        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 font-semibold">
+            <span className="text-xl">🦝</span>
+            <span>HeyRon</span>
+          </Link>
+          <div className="flex items-center gap-3">
+            <Link href="/login" className="text-sm text-text-secondary hover:text-white transition-colors">
+              Log out
             </Link>
           </div>
+        </div>
+      </header>
 
-          {/* Connected Channels */}
-          <div className="md:col-span-2 p-6 rounded-xl border border-border bg-surface">
-            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-              <MessageSquare className="w-5 h-5 text-secondary" />
-              Connected Channels
-            </h2>
-            <div className="p-4 rounded-lg border border-border bg-background/50 text-center">
-              <p className="text-text-secondary">Coming soon — connect Discord, Telegram, and more!</p>
+      <main className="pt-24 pb-16 px-6">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-2xl font-bold mb-6">Dashboard</h1>
+
+          <div className="space-y-4">
+            {/* Agents */}
+            <div className="p-4 rounded-lg border border-border">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="font-semibold flex items-center gap-2">
+                  <Bot className="w-4 h-4" />
+                  Agents
+                </h2>
+                <button className="px-3 py-1 bg-white text-black text-sm font-medium rounded hover:bg-gray-200 transition-colors">
+                  New
+                </button>
+              </div>
+              <div className="p-3 rounded border border-border bg-surface/50 text-center">
+                <p className="text-text-secondary text-sm">No agents yet</p>
+              </div>
             </div>
-          </div>
 
-          {/* Account Settings */}
-          <div className="p-6 rounded-xl border border-border bg-surface">
-            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-              <Settings className="w-5 h-5 text-secondary" />
-              Account
-            </h2>
-            <div className="space-y-3">
-              <Link href="#" className="flex items-center justify-between p-3 rounded-lg border border-border">
-                <span className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  Profile
-                </span>
-                <ExternalLink className="w-4 h-4 text-text-secondary" />
-              </Link>
-              <Link href="#" className="flex items-center justify-between p-3 rounded-lg border border-border">
-                <span className="flex items-center gap-2">
-                  <Settings className="w-4 h-4" />
-                  Settings
-                </span>
-                <ExternalLink className="w-4 h-4 text-text-secondary" />
-              </Link>
+            {/* Channels */}
+            <div className="p-4 rounded-lg border border-border">
+              <h2 className="font-semibold flex items-center gap-2 mb-4">
+                <MessageSquare className="w-4 h-4" />
+                Channels
+              </h2>
+              <div className="p-3 rounded border border-border bg-surface/50 text-center">
+                <p className="text-text-secondary text-sm">Connect Discord, Telegram, and more</p>
+              </div>
+            </div>
+
+            {/* Subscription */}
+            <div className="p-4 rounded-lg border border-border">
+              <h2 className="font-semibold flex items-center gap-2 mb-4">
+                <CreditCard className="w-4 h-4" />
+                Subscription
+              </h2>
+              <div className="flex items-center justify-between p-3 rounded border border-border bg-surface/50">
+                <div>
+                  <div className="font-medium">Free Plan</div>
+                  <p className="text-text-secondary text-sm">Current plan</p>
+                </div>
+                <Link href="/#pricing" className="text-sm text-white hover:underline">
+                  Upgrade →
+                </Link>
+              </div>
+            </div>
+
+            {/* Account */}
+            <div className="p-4 rounded-lg border border-border">
+              <h2 className="font-semibold flex items-center gap-2 mb-4">
+                <User className="w-4 h-4" />
+                Account
+              </h2>
+              <div className="space-y-2">
+                <Link href="#" className="flex items-center justify-between p-3 rounded border border-border hover:border-white transition-colors">
+                  <span className="text-sm">Profile</span>
+                  <Settings className="w-4 h-4 text-text-secondary" />
+                </Link>
+                <Link href="#" className="flex items-center justify-between p-3 rounded border border-border hover:border-white transition-colors">
+                  <span className="text-sm">Settings</span>
+                  <Settings className="w-4 h-4 text-text-secondary" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

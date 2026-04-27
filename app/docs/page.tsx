@@ -1,106 +1,88 @@
 import Link from 'next/link'
-import { ArrowLeft, BookOpen, Zap, Shield, MessageSquare, Code, Wrench } from 'lucide-react'
 
 const docSections = [
   {
     title: 'Getting Started',
-    icon: Zap,
-    description: 'Set up your first agent and connect to channels',
     links: [
       { title: 'What is HeyRon?', href: '/docs/what-is-heyron' },
-      { title: 'Creating Your First Agent', href: '/docs/create-first-agent' },
-      { title: 'Connecting to Discord', href: '/docs/connect-discord' },
-      { title: 'Connecting to Telegram', href: '/docs/connect-telegram' }
+      { title: 'Create your first agent', href: '/docs/create-first-agent' },
+      { title: 'Connect Discord', href: '/docs/connect-discord' },
+      { title: 'Connect Telegram', href: '/docs/connect-telegram' }
     ]
   },
   {
-    title: 'Core Concepts',
-    icon: BookOpen,
-    description: 'Understand how HeyRon works under the hood',
+    title: 'How It Works',
     links: [
-      { title: 'How Memory Works', href: '/docs/how-memory-works' },
-      { title: 'SOUL.md Explained', href: '/docs/soul-md' },
-      { title: 'Channels & Context', href: '/docs/channels-context' },
-      { title: 'Tools & Skills', href: '/docs/tools-skills' }
-    ]
-  },
-  {
-    title: 'Security & Privacy',
-    icon: Shield,
-    description: 'Keep your data safe and secure',
-    links: [
-      { title: 'Security Best Practices', href: '/docs/security' },
-      { title: 'Data Privacy', href: '/docs/privacy' },
-      { title: 'API Keys & Secrets', href: '/docs/api-keys' }
+      { title: 'Memory system', href: '/docs/how-memory-works' },
+      { title: 'Channels & context', href: '/docs/channels-context' },
+      { title: 'Tools & skills', href: '/docs/tools-skills' }
     ]
   },
   {
     title: 'Integrations',
-    icon: MessageSquare,
-    description: 'Connect HeyRon to your favorite tools',
     links: [
       { title: 'Google Workspace', href: '/docs/gmail-calendar' },
-      { title: 'Stripe Payments', href: '/docs/stripe' },
-      { title: 'Airtable CRM', href: '/docs/airtable' },
-      { title: 'Custom Webhooks', href: '/docs/webhooks' }
+      { title: 'Stripe', href: '/docs/stripe' },
+      { title: 'Airtable', href: '/docs/airtable' }
     ]
   },
   {
     title: 'Automation',
-    icon: Code,
-    description: 'Set up automated workflows and schedules',
     links: [
-      { title: 'Heartbeats Explained', href: '/docs/heartbeats' },
-      { title: 'Cron Jobs', href: '/docs/cron-jobs' },
-      { title: 'Sub-Agents', href: '/docs/sub-agents' }
-    ]
-  },
-  {
-    title: 'Troubleshooting',
-    icon: Wrench,
-    description: 'Fix common issues and get help',
-    links: [
-      { title: 'Agent Not Responding', href: '/docs/agent-not-responding' },
-      { title: 'Memory Issues', href: '/docs/memory-issues' },
-      { title: 'Channel Connection Problems', href: '/docs/channel-issues' }
+      { title: 'Heartbeats', href: '/docs/heartbeats' },
+      { title: 'Cron jobs', href: '/docs/cron-jobs' },
+      { title: 'Sub-agents', href: '/docs/sub-agents' }
     ]
   }
 ]
 
 export default function DocsPage() {
   return (
-    <div className="min-h-screen pt-24 pb-16">
-      <div className="max-w-content mx-auto px-6">
-        <Link href="/" className="inline-flex items-center gap-2 text-text-secondary hover:text-white mb-8 transition-colors">
-          <ArrowLeft className="w-4 h-4" />
-          Back to Home
-        </Link>
-
-        <h1 className="text-4xl font-bold mb-4">Documentation</h1>
-        <p className="text-text-secondary text-lg mb-12 max-w-2xl">
-          Everything you need to know about building with HeyRon. 
-          120+ tutorials, 50+ personas, and 15+ skills.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {docSections.map((section) => (
-            <div key={section.title} className="p-6 rounded-xl border border-border bg-surface hover:border-secondary transition-colors">
-              <section.icon className="w-8 h-8 text-secondary mb-4" />
-              <h2 className="text-xl font-semibold mb-2">{section.title}</h2>
-              <p className="text-text-secondary text-sm mb-4">{section.description}</p>
-              <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} className="text-text-secondary hover:text-white text-sm transition-colors">
-                      {link.title} →
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-sm">
+        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 font-semibold">
+            <span className="text-xl">🦝</span>
+            <span>HeyRon</span>
+          </Link>
+          <nav className="flex items-center gap-6 text-sm text-text-secondary">
+            <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
+            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
+          </nav>
         </div>
-      </div>
+      </header>
+
+      <main className="pt-24 pb-16 px-6">
+        <div className="max-w-3xl mx-auto">
+          <Link href="/" className="inline-flex items-center gap-2 text-text-secondary hover:text-white mb-8 transition-colors text-sm">
+            ← Back
+          </Link>
+
+          <h1 className="text-3xl font-bold mb-4">Docs</h1>
+          <p className="text-text-secondary mb-8">
+            Everything you need to build with HeyRon.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {docSections.map((section) => (
+              <div key={section.title} className="p-4 rounded-lg border border-border">
+                <h2 className="font-semibold mb-3">{section.title}</h2>
+                <ul className="space-y-2">
+                  {section.links.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-text-secondary hover:text-white text-sm transition-colors">
+                        {link.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
     </div>
   )
 }
