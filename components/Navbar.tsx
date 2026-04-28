@@ -30,12 +30,6 @@ export default function Navbar() {
           <Link href="/docs" className="text-text-secondary hover:text-white transition-colors">
             Docs
           </Link>
-          <Link href="/#features" className="text-text-secondary hover:text-white transition-colors">
-            Features
-          </Link>
-          <Link href="/#pricing" className="text-text-secondary hover:text-white transition-colors">
-            Pricing
-          </Link>
         </div>
 
         {/* Auth Buttons - Simple Links for Now */}
@@ -43,8 +37,8 @@ export default function Navbar() {
           <Link href="/login" className="text-text-secondary hover:text-white transition-colors">
             Log in
           </Link>
-          <Link href="/signup" className="px-4 py-2 bg-primary hover:bg-secondary rounded-lg transition-colors font-medium">
-            Get Started
+          <Link href="/signup" className="px-4 py-2 bg-white text-black hover:bg-gray-200 rounded-lg transition-colors font-medium">
+            Get Yours · $29/mo
           </Link>
         </div>
 
@@ -67,18 +61,12 @@ export default function Navbar() {
             <Link href="/docs" className="text-text-secondary hover:text-white" onClick={() => setIsOpen(false)}>
               Docs
             </Link>
-            <Link href="/#features" className="text-text-secondary hover:text-white" onClick={() => setIsOpen(false)}>
-              Features
-            </Link>
-            <Link href="/#pricing" className="text-text-secondary hover:text-white" onClick={() => setIsOpen(false)}>
-              Pricing
-            </Link>
             <hr className="border-border" />
             <Link href="/login" className="text-text-secondary hover:text-white" onClick={() => setIsOpen(false)}>
               Log in
             </Link>
-            <Link href="/signup" className="px-4 py-2 bg-primary hover:bg-secondary rounded-lg transition-colors text-center font-medium" onClick={() => setIsOpen(false)}>
-              Get Started
+            <Link href="/signup" className="px-4 py-2 bg-white text-black hover:bg-gray-200 rounded-lg transition-colors text-center font-medium" onClick={() => setIsOpen(false)}>
+              Get Yours · $29/mo
             </Link>
           </div>
         </div>

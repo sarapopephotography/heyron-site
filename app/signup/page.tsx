@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function SignupPage() {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-6">
       <div className="w-full max-w-sm">
         <Link href="/" className="flex items-center justify-center gap-2 mb-8">
-          <span className="text-2xl">🦝</span>
+          <Image src="/logo.jpg" alt="HeyRon" width={48} height={48} className="rounded" />
         </Link>
 
         <h1 className="text-xl font-semibold text-center mb-6">Create account</h1>

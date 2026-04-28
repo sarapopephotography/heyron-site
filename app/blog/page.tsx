@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft } from 'lucide-react'
 
 const blogPosts = [
@@ -46,13 +47,12 @@ export default function BlogPage() {
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-semibold">
-            <span className="text-xl">🦝</span>
+            <Image src="/logo.jpg" alt="HeyRon" width={32} height={32} className="rounded" />
             <span>HeyRon</span>
           </Link>
           <nav className="flex items-center gap-6 text-sm text-text-secondary">
             <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
             <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
-            <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
           </nav>
         </div>
       </header>

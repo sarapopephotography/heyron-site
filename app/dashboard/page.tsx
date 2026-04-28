@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Bot, CreditCard, MessageSquare, User, Settings } from 'lucide-react'
 
 export default function DashboardPage() {
@@ -8,7 +9,7 @@ export default function DashboardPage() {
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-semibold">
-            <span className="text-xl">🦝</span>
+            <Image src="/logo.jpg" alt="HeyRon" width={32} height={32} className="rounded" />
             <span>HeyRon</span>
           </Link>
           <div className="flex items-center gap-3">
@@ -62,8 +63,8 @@ export default function DashboardPage() {
                   <div className="font-medium">Free Plan</div>
                   <p className="text-text-secondary text-sm">Current plan</p>
                 </div>
-                <Link href="/#pricing" className="text-sm text-white hover:underline">
-                  Upgrade →
+                <Link href="/signup" className="text-sm text-white hover:underline">
+                  Get Yours →
                 </Link>
               </div>
             </div>
