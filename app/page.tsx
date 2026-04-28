@@ -39,16 +39,16 @@ export default function Home() {
       {/* Hero */}
       <section className="relative pt-32 pb-24 px-6">
         <div className="max-w-3xl mx-auto text-center relative">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface/80 border border-border/50 text-sm text-text-secondary mb-8 hover:border-white/30 transition-colors cursor-pointer">
-            <Sparkles className="w-4 h-4 text-amber-400" />
-            <span>Now with GPT-4o & Claude integration</span>
+          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm mb-8 hover:border-white/30 transition-colors cursor-pointer shadow-inner shadow-orange-500/20">
+            <Shield className="w-4 h-4" />
+            <span className="font-medium">Traceable, Auditable, Human-in-the-Loop</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight">
-            Your AI teammate.
+            Build, Test, Ship AI Agents That Work.
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-red-400">
-              Works when you can't.
+              With built-in Observability & Safety.
             </span>
           </h1>
           
