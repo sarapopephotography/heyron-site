@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="py-24 border-t border-border/50" id="features">
+      <section className="py-24 border-t border-border/50 reveal" id="features">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl font-semibold mb-4 text-center">What it does</h2>
           <p className="text-text-secondary text-center mb-12 max-w-xl mx-auto">
@@ -150,7 +150,7 @@ export default function Home() {
       </section>
 
       {/* Not Just for Business */}
-      <section className="py-24 bg-surface/20 border-y border-border/50">
+      <section className="py-24 bg-surface/20 border-y border-border/50 reveal">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl font-semibold mb-4 text-center">Not just for business</h2>
           <p className="text-text-secondary text-center mb-12">HeyRon works for your whole life, not just work.</p>
@@ -192,7 +192,7 @@ export default function Home() {
       </section>
 
       {/* Community */}
-      <section className="py-24 border-y border-border/50">
+      <section className="py-24 border-y border-border/50 reveal">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm mb-8">
             <Globe className="w-4 h-4" />
@@ -215,7 +215,7 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-24 bg-surface/20 border-y border-border/50">
+      <section className="py-24 bg-surface/20 border-y border-border/50 reveal">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl font-semibold mb-12 text-center">How it works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -256,7 +256,7 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section className="py-24" id="pricing">
+      <section className="py-24 reveal" id="pricing">
         <div className="max-w-md mx-auto px-6">
           <h2 className="text-3xl font-semibold mb-4 text-center">Simple pricing</h2>
           <p className="text-text-secondary text-center mb-8">One plan. Your own AI.</p>
@@ -299,7 +299,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 bg-surface/20 border-t border-border/50" id="faq">
+      <section className="py-24 bg-surface/20 border-t border-border/50 reveal" id="faq">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-3xl font-semibold mb-8 text-center">Questions</h2>
           
