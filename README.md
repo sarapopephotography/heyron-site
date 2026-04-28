@@ -117,7 +117,7 @@ Edit landing page in `app/page.tsx`.
 - [ ] Motion animations (scroll-triggered + hover effects)
 
 ### Notes:
-- Live URL: (REDEPLOY NEEDED - project was deleted)
+- Live URL: https://heyron-site.vercel.app (heyron-site project)
 - Vercel auto-deploys on push to master
 - Preview deployments created for each commit (check Vercel dashboard)
 - **IF BROKEN:** Re-import from Vercel dashboard: Import → sarapopephotography/heyron-site → Deploy
