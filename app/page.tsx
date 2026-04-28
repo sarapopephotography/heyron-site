@@ -7,8 +7,9 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* Gradient background effect */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[100px]"></div>
+        <div className="absolute top-1/2 left-0 w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-[80px]"></div>
       </div>
 
       {/* Minimal Header */}
@@ -38,30 +39,49 @@ export default function Home() {
       {/* Hero */}
       <section className="relative pt-32 pb-24 px-6">
         <div className="max-w-3xl mx-auto text-center relative">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-border text-sm text-text-secondary mb-6">
-            <Sparkles className="w-4 h-4 text-yellow-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface/80 border border-border/50 text-sm text-text-secondary mb-8 hover:border-white/30 transition-colors cursor-pointer">
+            <Sparkles className="w-4 h-4 text-amber-400" />
             <span>Now with GPT-4o & Claude integration</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight">
             Your AI teammate.
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-text-secondary to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-red-400">
               Works when you can't.
             </span>
           </h1>
+          
+          {/* Hero visual element */}
+          <div className="relative mx-auto mb-10 w-full max-w-2xl h-[200px] rounded-2xl border border-border/50 bg-surface/30 backdrop-blur-sm overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/30 border border-primary/50 flex items-center justify-center">
+                  <MessageSquare className="w-6 h-6 text-white" />
+                </div>
+                <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                  <Zap className="w-4 h-4 text-green-400" />
+                </div>
+                <div className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-sm text-white">
+                  Got it! I'll handle the rest.
+                </div>
+              </div>
+            </div>
+            {/* Scan line effect */}
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent animate-pulse"></div>
+          </div>
           
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-8 leading-relaxed">
             Connect HeyRon to Discord, Telegram, Slack, and more. It handles messages, manages tasks, and grows with you to improve your life or business. Whether you're a total AI newbie or a tech pro, HeyRon meets you where you are and grows as you grow.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/signup" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-all hover:scale-105">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link href="/signup" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-xl hover:bg-gray-200 transition-all hover:scale-105 hover:shadow-lg hover:shadow-white/10">
               Get Yours · $29/mo
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link href="#faq" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border hover:border-white/50 rounded-lg transition-colors text-text-secondary hover:text-white">
-              Questions?
+            <Link href="#faq" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-border hover:border-white/50 rounded-xl transition-colors text-text-secondary hover:text-white bg-surface/30">
+              See How It Works
             </Link>
           </div>
         </div>
@@ -174,18 +194,22 @@ export default function Home() {
       {/* Community */}
       <section className="py-24 border-y border-border/50">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm mb-6">
+          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm mb-8">
             <Globe className="w-4 h-4" />
-            <span>2,000+ Active Agents</span>
+            <span className="font-medium">2,000+ Active Agents</span>
+            <span className="text-green-400/50">·</span>
+            <span>50K+ daily messages</span>
+            <span className="text-green-400/50">·</span>
+            <span>47 countries</span>
           </div>
           
           <h2 className="text-3xl font-semibold mb-4">You're not alone</h2>
           <p className="text-text-secondary mb-8 text-lg">
             Every member gets access to our private Discord community. Thousands of people building with their own AI. Share what you're making, get help, see what others are doing. Learn together, grow together.
           </p>
-          <Link href="/signup" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-all hover:scale-105">
+          <Link href="/signup" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-xl hover:bg-gray-200 transition-all hover:scale-105 hover:shadow-lg hover:shadow-white/10">
             Get Started · $29/mo
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>
@@ -195,20 +219,35 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl font-semibold mb-12 text-center">How it works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="relative p-6 rounded-xl border border-border bg-surface/30 hover:border-white/20 transition-all">
-              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-white text-black font-bold flex items-center justify-center text-sm">1</div>
+            <div className="relative p-6 rounded-2xl border border-border bg-surface/30 hover:border-white/20 transition-all group">
+              <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 text-black font-bold flex items-center justify-center shadow-lg shadow-amber-500/30">
+                <span className="text-lg">✨</span>
+              </div>
+              <div className="mt-4 mb-3 w-12 h-12 rounded-xl bg-gradient-to-br from-primary/30 to-secondary/30 border border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span className="text-2xl">👋</span>
+              </div>
               <h3 className="font-semibold mb-2 mt-2">Sign up and pick a name</h3>
               <p className="text-sm text-text-secondary">Your AI gets a name you choose. Sign up and go.</p>
             </div>
             
-            <div className="relative p-6 rounded-xl border border-border bg-surface/30 hover:border-white/20 transition-all">
-              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-white text-black font-bold flex items-center justify-center text-sm">2</div>
+            <div className="relative p-6 rounded-2xl border border-border bg-surface/30 hover:border-white/20 transition-all group">
+              <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 text-black font-bold flex items-center justify-center shadow-lg shadow-blue-500/30">
+                <span className="text-lg">⚡</span>
+              </div>
+              <div className="mt-4 mb-3 w-12 h-12 rounded-xl bg-gradient-to-br from-primary/30 to-secondary/30 border border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span className="text-2xl">🔒</span>
+              </div>
               <h3 className="font-semibold mb-2 mt-2">We set up your private AI server</h3>
               <p className="text-sm text-text-secondary">Your own dedicated instance. Private. Isolated. Just for you.</p>
             </div>
             
-            <div className="relative p-6 rounded-xl border border-border bg-surface/30 hover:border-white/20 transition-all">
-              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-white text-black font-bold flex items-center justify-center text-sm">3</div>
+            <div className="relative p-6 rounded-2xl border border-border bg-surface/30 hover:border-white/20 transition-all group">
+              <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 text-black font-bold flex items-center justify-center shadow-lg shadow-green-500/30">
+                <span className="text-lg">🚀</span>
+              </div>
+              <div className="mt-4 mb-3 w-12 h-12 rounded-xl bg-gradient-to-br from-primary/30 to-secondary/30 border border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span className="text-2xl">💬</span>
+              </div>
               <h3 className="font-semibold mb-2 mt-2">Start talking in 2 minutes</h3>
               <p className="text-sm text-text-secondary">No setup. No code. Just open the chat and go.</p>
             </div>
