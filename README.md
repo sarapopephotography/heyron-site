@@ -105,6 +105,23 @@ Edit landing page in `app/page.tsx`.
 3. Make your changes
 4. Submit a pull request
 
+---
+
+## 📋 Pending Changes / Changelog
+
+### Latest Update: April 28, 2026
+- ✅ Design refresh: hero visual, enhanced gradients, How It Works icons (commit e524b6d)
+- ⏳ Motion/Animation effects: scroll-triggered entrance animations + hover effects
+
+### Features In Progress:
+- [ ] Motion animations (scroll-triggered + hover effects)
+
+### Notes:
+- Live URL: https://heyron-site-wkus-k0xxxa080-sara-7247s-projects.vercel.app
+- Vercel auto-deploys on push to master
+
+---
+
 ## 📄 License
 
 MIT License — see LICENSE for details.
