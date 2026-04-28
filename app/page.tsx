@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, MessageSquare, Zap, Shield, Code } from 'lucide-react'
 
 export default function Home() {
@@ -7,8 +8,8 @@ export default function Home() {
       {/* Minimal Header */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 font-semibold">
-            <span className="text-xl">🦝</span>
+          <Link href="/" className="flex items-center gap-2 font-semibold">
+            <Image src="/logo.jpg" alt="HeyRon" width={32} height={32} className="rounded" />
             <span>HeyRon</span>
             <span className="px-2 py-0.5 text-xs bg-primary/30 text-text-secondary rounded">Beta</span>
           </Link>
