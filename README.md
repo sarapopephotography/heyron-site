@@ -111,7 +111,7 @@ Edit landing page in `app/page.tsx`.
 
 ### Latest Update: April 28, 2026
 - ✅ Design refresh: hero visual, enhanced gradients, How It Works icons (commit e524b6d)
-- ⏳ Motion/Animation effects: scroll-triggered entrance animations + hover effects
+- ✅ Motion/Animation effects: scroll-triggered entrance animations + hover effects (commit d7576e5)
 
 ### Features In Progress:
 - [ ] Motion animations (scroll-triggered + hover effects)
