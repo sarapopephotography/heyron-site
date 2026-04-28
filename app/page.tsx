@@ -38,8 +38,7 @@ export default function Home() {
           </h1>
           
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-8">
-            Connect your agent to Discord, Telegram, Email, and more. 
-            It handles messages, manages tasks, and keeps your business running — 24/7.
+            Not your typical out-of-the-box AI. This one grows with you — whether you're a total newbie or a tech whiz. Meet it where you are, shape it to fit your needs, and watch it evolve as your needs grow.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
