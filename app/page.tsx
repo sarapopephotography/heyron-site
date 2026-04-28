@@ -255,6 +255,82 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Skills & Capabilities */}
+      <section className="py-24 border-y border-border/50 reveal">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-semibold mb-4 text-center">What your AI can do</h2>
+          <p className="text-text-secondary text-center mb-12 max-w-xl mx-auto">
+            HeyRon comes with 60+ ready-to-use skills. Connect your tools and let your AI do the work.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="p-5 rounded-xl border border-border bg-surface/30 hover:border-white/20 transition-all group">
+              <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mb-3 group-hover:bg-blue-500/30 transition-colors">
+                <span className="text-xl">✍️</span>
+              </div>
+              <h3 className="font-semibold mb-2">Writing & Content</h3>
+              <p className="text-sm text-text-secondary">
+                Human-sounding writing, article summaries, social media planning, email campaigns, SEO optimization.
+              </p>
+            </div>
+            
+            <div className="p-5 rounded-xl border border-border bg-surface/30 hover:border-white/20 transition-all group">
+              <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center mb-3 group-hover:bg-green-500/30 transition-colors">
+                <span className="text-xl">📊</span>
+              </div>
+              <h3 className="font-semibold mb-2">Business & Research</h3>
+              <p className="text-sm text-text-secondary">
+                Market research, competitor analysis, data reports, automation workflows, real estate guidance.
+              </p>
+            </div>
+            
+            <div className="p-5 rounded-xl border border-border bg-surface/30 hover:border-white/20 transition-all group">
+              <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center mb-3 group-hover:bg-purple-500/30 transition-colors">
+                <span className="text-xl">🔌</span>
+              </div>
+              <h3 className="font-semibold mb-2">Integrations</h3>
+              <p className="text-sm text-text-secondary">
+                Gmail, Google Calendar, Notion, GitHub, Stripe, Airtable, and 60+ more tools.
+              </p>
+            </div>
+            
+            <div className="p-5 rounded-xl border border-border bg-surface/30 hover:border-white/20 transition-all group">
+              <div className="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center mb-3 group-hover:bg-amber-500/30 transition-colors">
+                <span className="text-xl">🌅</span>
+              </div>
+              <h3 className="font-semibold mb-2">Daily Life</h3>
+              <p className="text-sm text-text-secondary">
+                Morning briefings, journaling, habit tracking, grocery lists, home projects, learning goals.
+              </p>
+            </div>
+            
+            <div className="p-5 rounded-xl border border-border bg-surface/30 hover:border-white/20 transition-all group">
+              <div className="w-10 h-10 rounded-lg bg-rose-500/20 flex items-center justify-center mb-3 group-hover:bg-rose-500/30 transition-colors">
+                <span className="text-xl">💰</span>
+              </div>
+              <h3 className="font-semibold mb-2">Finance</h3>
+              <p className="text-sm text-text-secondary">
+                Daily market briefs, watchlist tracking, macro trends — with your own API keys.
+              </p>
+            </div>
+            
+            <div className="p-5 rounded-xl border border-border bg-surface/30 hover:border-white/20 transition-all group">
+              <div className="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center mb-3 group-hover:bg-cyan-500/30 transition-colors">
+                <span className="text-xl">🛠️</span>
+              </div>
+              <h3 className="font-semibold mb-2">Self-Improvement</h3>
+              <p className="text-sm text-text-secondary">
+                Your AI learns from errors, tracks patterns, and gets better over time. It grows with you.
+              </p>
+            </div>
+          </div>
+          
+          <p className="text-center text-sm text-text-secondary mt-8">
+            <Link href="/docs" className="text-white hover:underline">Read the docs</Link> for full skill list and setup guides.
+          </p>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section className="py-24 reveal" id="pricing">
         <div className="max-w-md mx-auto px-6">
