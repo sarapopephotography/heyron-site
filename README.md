@@ -112,6 +112,7 @@ Edit landing page in `app/page.tsx`.
 ### Latest Update: April 28, 2026
 - ✅ Design refresh: hero visual, enhanced gradients, How It Works icons (commit e524b6d)
 - ✅ Motion/Animation effects: scroll-triggered entrance animations + hover effects (commit d7576e5)
+- **[NEW] Feature:** Added a "Featured Contributor" section for Robby Houston to the homepage showcasing his AI agent insights and links.
 
 ### Features In Progress:
 - [ ] Motion animations (scroll-triggered + hover effects)
