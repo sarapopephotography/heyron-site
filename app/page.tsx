@@ -143,37 +143,41 @@ export default function Home() {
 
       {/* Pricing - Simple */}
       <section className="py-20" id="pricing">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-2xl font-semibold mb-8 text-center">Pricing</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
-            <div className="p-6 rounded-lg border border-border">
-              <h3 className="font-medium text-text-secondary">Starter</h3>
-              <div className="text-3xl font-bold mt-2 mb-4">$0</div>
-              <ul className="text-sm text-text-secondary space-y-2">
-                <li>1 agent</li>
-                <li>2 channels</li>
-                <li>Basic memory</li>
-              </ul>
-            </div>
-            <div className="p-6 rounded-lg border-2 border-white bg-surface">
-              <h3 className="font-medium">Pro</h3>
-              <div className="text-3xl font-bold mt-2 mb-4">$29<span className="text-sm font-normal text-text-secondary">/mo</span></div>
-              <ul className="text-sm text-text-secondary space-y-2">
-                <li>Unlimited agents</li>
-                <li>Unlimited channels</li>
-                <li>Advanced memory</li>
-                <li>Priority support</li>
-              </ul>
-            </div>
-            <div className="p-6 rounded-lg border border-border">
-              <h3 className="font-medium text-text-secondary">Team</h3>
-              <div className="text-3xl font-bold mt-2 mb-4">$99<span className="text-sm font-normal text-text-secondary">/mo</span></div>
-              <ul className="text-sm text-text-secondary space-y-2">
-                <li>Everything in Pro</li>
-                <li>5 team members</li>
-                <li>Shared workspaces</li>
-              </ul>
-            </div>
+        <div className="max-w-2xl mx-auto px-6">
+          <h2 className="text-2xl font-semibold mb-4 text-center">Simple pricing</h2>
+          <p className="text-text-secondary text-center mb-8">One plan. Your own AI.</p>
+          
+          <div className="p-8 rounded-lg border-2 border-white bg-surface">
+            <h3 className="text-xl font-medium mb-2">One Plan</h3>
+            <div className="text-4xl font-bold mb-2">$29<span className="text-lg font-normal text-text-secondary">/mo</span></div>
+            <p className="text-sm text-text-secondary mb-6">Cancel anytime. No contracts.</p>
+            
+            <ul className="text-sm space-y-3 mb-8">
+              <li className="flex items-center gap-2">
+                <span className="text-green-400">✓</span>
+                Your own private AI instance
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-green-400">✓</span>
+                Generous monthly usage (more than most people need)
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-green-400">✓</span>
+                Persistent memory across sessions
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-green-400">✓</span>
+                Web search, file creation, real tools
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-green-400">✓</span>
+                Private Discord community
+              </li>
+            </ul>
+            
+            <a href="#" className="block w-full py-3 bg-white text-black font-medium text-center rounded-lg hover:bg-gray-200 transition-colors">
+              Get Yours · $29/mo
+            </a>
           </div>
         </div>
       </section>
