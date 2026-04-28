@@ -71,6 +71,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Beta Notice */}
+      <section className="py-12 px-6 border-b border-border">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-sm text-text-secondary">
+            <span className="text-yellow-400 font-medium">We're in beta.</span>{' '}
+            HeyRon is live and growing fast — but we're still building. You may hit rough edges, slow responses, or the occasional bug. That's the tradeoff: you get in early, at the ground floor, while we make it great. Our team fixes issues daily and your feedback shapes what we build next.
+          </p>
+        </div>
+      </section>
+
       {/* Features - Grid, No Fluff */}
       <section className="py-20 border-t border-border">
         <div className="max-w-5xl mx-auto px-6">
