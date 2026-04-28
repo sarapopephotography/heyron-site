@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { MessageSquare, Zap, Shield, Code, Users, Heart, Home as HomeIcon, BookOpen } from 'lucide-react'
+import { MessageSquare, Zap, Shield, Code, Users, Heart, Home as HomeIcon, BookOpen, Lock, HelpCircle, CheckCircle } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -16,6 +16,7 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-6 text-sm text-text-secondary">
             <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
             <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <Link href="#faq" className="hover:text-white transition-colors">FAQ</Link>
           </nav>
           <div className="flex items-center gap-3">
             <Link href="/login" className="text-sm text-text-secondary hover:text-white transition-colors">
@@ -45,29 +46,9 @@ export default function Home() {
             <Link href="/signup" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-colors">
               Get Yours · $29/mo
             </Link>
-            <Link href="/docs" className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-border hover:border-text-secondary rounded-lg transition-colors text-text-secondary hover:text-white">
-              See how it works
+            <Link href="#faq" className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-border hover:border-text-secondary rounded-lg transition-colors text-text-secondary hover:text-white">
+              Questions?
             </Link>
-          </div>
-        </div>
-
-        {/* Visual - Simple showcase */}
-        <div className="mt-16 max-w-3xl mx-auto">
-          <div className="rounded-lg border border-border bg-surface/50 p-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold text-white mb-1">2,000+</div>
-                <div className="text-sm text-text-secondary">Active Agents</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white mb-1">50K+</div>
-                <div className="text-sm text-text-secondary">Conversations Daily</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white mb-1">47</div>
-                <div className="text-sm text-text-secondary">Countries</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -87,28 +68,28 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-semibold mb-8 text-center">What it does</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
+            <div className="p-6 rounded-lg border border-border hover:border-white/30 transition-colors">
               <MessageSquare className="w-6 h-6 text-text-secondary mb-3" />
               <h3 className="font-semibold mb-2">Multi-Channel</h3>
               <p className="text-sm text-text-secondary">
                 Discord, Telegram, WhatsApp, Signal. One agent, everywhere you are.
               </p>
             </div>
-            <div>
+            <div className="p-6 rounded-lg border border-border hover:border-white/30 transition-colors">
               <Zap className="w-6 h-6 text-text-secondary mb-3" />
               <h3 className="font-semibold mb-2">Memory</h3>
               <p className="text-sm text-text-secondary">
                 Remembers context, preferences, and important details. No repeating yourself.
               </p>
             </div>
-            <div>
+            <div className="p-6 rounded-lg border border-border hover:border-white/30 transition-colors">
               <Shield className="w-6 h-6 text-text-secondary mb-3" />
               <h3 className="font-semibold mb-2">Private</h3>
               <p className="text-sm text-text-secondary">
                 Your data stays yours. Clear boundaries, configurable security.
               </p>
             </div>
-            <div>
+            <div className="p-6 rounded-lg border border-border hover:border-white/30 transition-colors">
               <Code className="w-6 h-6 text-text-secondary mb-3" />
               <h3 className="font-semibold mb-2">60+ Skills</h3>
               <p className="text-sm text-text-secondary">
@@ -126,29 +107,29 @@ export default function Home() {
           <p className="text-text-secondary text-center mb-8">HeyRon works for your whole life, not just work.</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-4 rounded-lg border border-border">
-              <Heart className="w-6 h-6 text-text-secondary mb-2" />
+            <div className="p-6 rounded-lg border border-border hover:border-white/30 transition-colors">
+              <Heart className="w-6 h-6 text-rose-400 mb-2" />
               <h3 className="font-medium mb-2">Family & Relationships</h3>
               <p className="text-sm text-text-secondary">
                 Track family birthdays, remember important dates, help plan gatherings, manage household schedules.
               </p>
             </div>
-            <div className="p-4 rounded-lg border border-border">
-              <HomeIcon className="w-6 h-6 text-text-secondary mb-2" />
+            <div className="p-6 rounded-lg border border-border hover:border-white/30 transition-colors">
+              <HomeIcon className="w-6 h-6 text-amber-400 mb-2" />
               <h3 className="font-medium mb-2">Home Life</h3>
               <p className="text-sm text-text-secondary">
                 Manage grocery lists, track home projects, organize photos and memories, plan vacations.
               </p>
             </div>
-            <div className="p-4 rounded-lg border border-border">
-              <BookOpen className="w-6 h-6 text-text-secondary mb-2" />
+            <div className="p-6 rounded-lg border border-border hover:border-white/30 transition-colors">
+              <BookOpen className="w-6 h-6 text-blue-400 mb-2" />
               <h3 className="font-medium mb-2">Learning & Growth</h3>
               <p className="text-sm text-text-secondary">
                 Learn new skills, get book summaries, practice languages, track personal goals.
               </p>
             </div>
-            <div className="p-4 rounded-lg border border-border">
-              <Users className="w-6 h-6 text-text-secondary mb-2" />
+            <div className="p-6 rounded-lg border border-border hover:border-white/30 transition-colors">
+              <Users className="w-6 h-6 text-green-400 mb-2" />
               <h3 className="font-medium mb-2">Community</h3>
               <p className="text-sm text-text-secondary">
                 Join thousands of others building with AI. Share what you're making, learn together, grow together.
@@ -176,18 +157,18 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-semibold mb-8">How it works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="border-l border-border pl-4">
-              <div className="text-sm text-text-secondary mb-1">01</div>
+            <div className="p-6 rounded-lg border border-border hover:border-white/30 transition-colors">
+              <div className="text-3xl font-bold text-white/20 mb-2">01</div>
               <h3 className="font-medium mb-2">Sign up and pick a name</h3>
               <p className="text-sm text-text-secondary">Your AI gets a name you choose. Sign up and go.</p>
             </div>
-            <div className="border-l border-border pl-4">
-              <div className="text-sm text-text-secondary mb-1">02</div>
+            <div className="p-6 rounded-lg border border-border hover:border-white/30 transition-colors">
+              <div className="text-3xl font-bold text-white/20 mb-2">02</div>
               <h3 className="font-medium mb-2">We set up your private AI server</h3>
               <p className="text-sm text-text-secondary">Your own dedicated instance. Private. Isolated. Just for you.</p>
             </div>
-            <div className="border-l border-border pl-4">
-              <div className="text-sm text-text-secondary mb-1">03</div>
+            <div className="p-6 rounded-lg border border-border hover:border-white/30 transition-colors">
+              <div className="text-3xl font-bold text-white/20 mb-2">03</div>
               <h3 className="font-medium mb-2">Start talking in 2 minutes</h3>
               <p className="text-sm text-text-secondary">No setup. No code. Just open the chat and go.</p>
             </div>
@@ -208,23 +189,23 @@ export default function Home() {
             
             <ul className="text-sm space-y-3 mb-8">
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
+                <CheckCircle className="w-4 h-4 text-green-400" />
                 Your own private AI instance
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
+                <CheckCircle className="w-4 h-4 text-green-400" />
                 Generous monthly usage (more than most people need)
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
+                <CheckCircle className="w-4 h-4 text-green-400" />
                 Persistent memory across sessions
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
+                <CheckCircle className="w-4 h-4 text-green-400" />
                 Web search, file creation, real tools
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
+                <CheckCircle className="w-4 h-4 text-green-400" />
                 Private Discord community
               </li>
             </ul>
@@ -232,6 +213,75 @@ export default function Home() {
             <Link href="/signup" className="block w-full py-3 bg-white text-black font-medium text-center rounded-lg hover:bg-gray-200 transition-colors">
               Get Yours · $29/mo
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 border-y border-border" id="faq">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-2xl font-semibold mb-8 text-center">Questions</h2>
+          
+          <div className="space-y-4">
+            <div className="p-4 rounded-lg border border-border">
+              <h3 className="font-medium mb-2 flex items-center gap-2">
+                <HelpCircle className="w-4 h-4 text-text-secondary" />
+                How is this different from ChatGPT?
+              </h3>
+              <p className="text-sm text-text-secondary">
+                ChatGPT is shared. Everyone talks to the same model, and it forgets you between sessions. HeyRon is your own private AI instance. It remembers every conversation, creates real files you can download, searches the web, and saves work to your personal workspace. It's not a chatbot. It's a worker.
+              </p>
+            </div>
+            
+            <div className="p-4 rounded-lg border border-border">
+              <h3 className="font-medium mb-2 flex items-center gap-2">
+                <HelpCircle className="w-4 h-4 text-text-secondary" />
+                Can't I just use ChatGPT Plus and a notes app?
+              </h3>
+              <p className="text-sm text-text-secondary">
+                You could. But you'd spend your time copy-pasting context, re-explaining your situation, organizing files yourself, and hoping the AI remembers what you told it. With HeyRon, context is automatic. Your AI already knows your projects, your preferences, and your history. It picks up right where you left off.
+              </p>
+            </div>
+            
+            <div className="p-4 rounded-lg border border-border">
+              <h3 className="font-medium mb-2 flex items-center gap-2">
+                <HelpCircle className="w-4 h-4 text-text-secondary" />
+                Do I need to be technical?
+              </h3>
+              <p className="text-sm text-text-secondary">
+                No. You talk to it like a person. We handle all the infrastructure. You sign up, name your AI, and start chatting in under 2 minutes.
+              </p>
+            </div>
+            
+            <div className="p-4 rounded-lg border border-border">
+              <h3 className="font-medium mb-2 flex items-center gap-2">
+                <Lock className="w-4 h-4 text-green-400" />
+                Is my data private?
+              </h3>
+              <p className="text-sm text-text-secondary">
+                Yes. Your instance is completely isolated on its own server. Your conversations and files don't train any models and aren't shared with anyone. It's just yours. HeyRon only has access to what you explicitly give it. It won't go looking for your credit card info or any other data unless you ask it to help with those things.
+              </p>
+            </div>
+            
+            <div className="p-4 rounded-lg border border-border">
+              <h3 className="font-medium mb-2 flex items-center gap-2">
+                <HelpCircle className="w-4 h-4 text-text-secondary" />
+                What happens after I pay?
+              </h3>
+              <p className="text-sm text-text-secondary">
+                We spin up your private AI in about 2 minutes. You name it, start a conversation, and you're off. You also get access to our private Discord community where other members share what they're building.
+              </p>
+            </div>
+            
+            <div className="p-4 rounded-lg border border-border">
+              <h3 className="font-medium mb-2 flex items-center gap-2">
+                <HelpCircle className="w-4 h-4 text-text-secondary" />
+                Can I cancel?
+              </h3>
+              <p className="text-sm text-text-secondary">
+                Anytime. No contracts. You can manage your subscription and export your data at heyron.ai/account.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -247,6 +297,7 @@ export default function Home() {
             <div className="flex items-center gap-6 text-sm text-text-secondary">
               <a href="/docs" className="hover:text-white transition-colors">Docs</a>
               <a href="/blog" className="hover:text-white transition-colors">Blog</a>
+              <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
               <a href="https://github.com/heyron-ai" className="hover:text-white transition-colors">GitHub</a>
             </div>
           </div>
