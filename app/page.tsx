@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { MessageSquare, Zap, Shield, Code, Users, Heart, Home as HomeIcon, BookOpen, Lock, HelpCircle, CheckCircle, ArrowRight, Sparkles, Globe, Clock } from 'lucide-react'
 
 export default function Home() {
@@ -53,23 +54,25 @@ export default function Home() {
           </h1>
           
           {/* Hero visual element */}
-          <div className="relative mx-auto mb-10 w-full max-w-2xl h-[200px] rounded-2xl border border-border/50 bg-surface/30 backdrop-blur-sm overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/30 border border-primary/50 flex items-center justify-center">
-                  <MessageSquare className="w-6 h-6 text-white" />
-                </div>
-                <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
-                  <Zap className="w-4 h-4 text-green-400" />
-                </div>
-                <div className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-sm text-white">
-                  Got it! I'll handle the rest.
-                </div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="relative mx-auto mb-10 w-full max-w-2xl h-[300px] rounded-2xl border border-border/50 overflow-hidden"
+          >
+            <Image 
+              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80" 
+              alt="AI illustration"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+            <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
+              <div className="px-3 py-1.5 rounded-lg bg-white/10 border border-white/20 text-sm text-white backdrop-blur-sm">
+                Your AI, working while you rest
               </div>
             </div>
-            {/* Scan line effect */}
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent animate-pulse"></div>
-          </div>
+          </motion.div>
           
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-8 leading-relaxed">
             Connect HeyRon to Discord, Telegram, Slack, and more. It handles messages, manages tasks, and grows with you to improve your life or business. Whether you're a total AI newbie or a tech pro, HeyRon meets you where you are and grows as you grow.
@@ -100,7 +103,15 @@ export default function Home() {
       {/* Features */}
       <section className="py-24 border-t border-border/50 reveal" id="features">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-semibold mb-4 text-center">What it does</h2>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl font-semibold mb-4 text-center"
+          >
+            What it does
+          </motion.h2>
           <p className="text-text-secondary text-center mb-12 max-w-xl mx-auto">
             From handling messages to managing your entire workflow, HeyRon is your personal assistant that never sleeps.
           </p>
